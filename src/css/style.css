@@ -1,0 +1,274 @@
+/*geral*/
+html {
+
+    font-family: 'Open Sans', sans-serif;
+    color: #373A3C
+}
+
+body {
+    background-color: rgba(169, 169, 169, 0.464);
+}
+
+a {
+    transition: 0.7s;
+}
+
+   
+
+/*sindebar*/
+
+#sindebar {
+    position: fixed;
+    background-color: tomato;
+    height: 100%;
+    width: 300px;
+    padding-top: 30px;
+    padding-left: auto;
+}
+
+#sindebar h1 {
+
+
+    font-weight: bold;
+    color: #ffff;
+    font-size: 34px;
+    text-align: center;
+    padding-top: 30px;
+
+
+}
+
+#sindebar a {
+    font-weight: bold;
+    padding-top: 30px;
+    color: #ffff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.cabecalho {
+
+    margin-top: 30px;
+    padding-left: auto;
+}
+
+#sindebar a:hover {
+
+    color: goldenrod;
+}
+
+
+#sindebar li {
+
+    background-color: rgb(157, 47, 32);
+    padding: 20px;
+}
+
+
+.sindebar-container {
+    position: relative;
+    /*o css vai caucular qual o cn*/
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    /*largura de sindebar-container*/
+}
+
+.logo-doceria {
+    max-width: 80px;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*CONTEUDO*/
+section{
+    padding-left: 50px;
+    width: 100%;
+}
+
+.content {
+    
+    position: absolute;/*Para poder mexer nela livremente*/
+    left: 300px;
+    width: calc(100% - 350px);
+}
+.content h1, .content h2{
+    margin-bottom: 30px ;
+    color: blue;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+/*BEM VINDO*/
+#sessao-bemvindo{
+    padding-left: 0;
+}
+.sessao-bemvindo-content{
+    padding-left: 50px;
+}
+#sessao-bemvindo .banner{
+    height: 500px;
+    background-image: url("../img/banner2.jpg");/*coloquei a imagem como fundo*/
+    background-position: center;/*centralizei a imagem*/
+    background-size: cover;/*adicionei um zoom na imagem*/
+}
+#sessao-bemvindo h2{
+    margin-top: 50px;
+
+}#sessao-bemvindo::after, #sessao-sobre::after{/* float não vai altera meu layout, esse é um elemento vazio*/
+    content: "";/*ele vai fingir que é uma div em baixo da sessão bem-vindo*/
+    display: block;
+    clear: both;/*informa que as divs dele não devem ser mais influenciadas pelos float*/
+    margin-bottom: 100px;
+}
+.sessao-minibanner {
+    width: 300px;
+    height: 400px;
+    background-image:url("../img/banner3.jpg") ;
+    background-position:center ;
+    background-size: cover;
+    float: left;
+}
+.sessao-descricao{
+   position: absolute;
+   left: 370px;
+   padding-right: 30px ;
+}
+.sessao-descricao p{
+    line-height: 2;/*espaço entre linhas*/
+    font-size: 16px;
+    margin-bottom: 30px;
+    margin-left: 25px;
+}
+
+
+/*SESSÃO SOBRE*/
+#sessao-sobre .sessao-minibanner{
+    float: right;/*colocar a imagem para a direita*/
+    margin-right: 50px;
+    background-image: url("../img/banner4.jpg");
+}
+#sessao-sobre .sessao-descricao{
+    position: absolute;
+    left: 25px;
+    width:calc(100% - 400px);
+}
+/*GALERIAS*/
+.banner-galeria{
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+    height: 200px;
+}
+#sessao-doces1, #sessao-doces2,#sessao-doces3{
+    padding-right: 50px;
+    margin-bottom: 50px;
+}
+.doces1-imgs{
+    width: 18.8%;
+    margin-left: .5%;
+    margin-right: .5%;
+}
+#img1 {
+    background-image: url("../img/galeria1.jpg");
+    margin-left: 0;
+}
+#img2 {
+    background-image: url("../img/galeria2.jpg");
+  
+}
+#img3 {
+    background-image: url("../img/galeria3.jpg");
+   
+}
+#img4 {
+    background-image: url("../img/galeria4.jpg");
+   
+}
+#img5 {
+    background-image: url("../img/galeria5.jpg");
+    margin-right: 0;
+}
+.doces2-imgs{
+    width: 32.3%;
+    margin-left: .5%;
+    margin-right: .5%;
+}#img6 {
+    background-image: url("../img/galeria6.jpg");
+    margin-left: 0;
+    
+}
+#img7 {
+    background-image: url("../img/galeria7.jpg");
+  
+}
+#img8 {
+    background-image: url("../img/galeria8.jpg");
+   margin-right: 0;
+}
+.doces3-imgs{
+    width: 23.9%;
+    margin-left: .5%;
+    margin-right: .5%;
+}
+#img9 {
+    background-image: url("../img/galeria9.jpg");
+    margin-left: 0;
+  
+}
+#img10 {
+    background-image: url("../img/galeria10.jpg");
+   
+}
+#img11 {
+    background-image: url("../img/galeria11.jpg");
+   
+}
+#img12 {
+    background-image: url("../img/galeria12.jpg");
+    margin-right: 0;
+}
+/*CONTATO*/
+#sessao-contato{
+    width: 500px;
+}
+#sessao-contato ::placeholder{
+    color:tomato ;/*cor do texrto que aparece dentro do input*/
+}
+#sessao-contato input[type=text], #sessao-contato input[type=email], #sessao-contato textarea{
+    display: block;
+    border: 1px solid #006599;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+#sessao-contato textarea{
+    height: 100px;
+}
+.bemvindo-butao, form input[type=submit]{
+    border: none;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: tomato ;
+    font-weight: bold;
+    color: #ffff;
+    transition: 0.8s;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.bemvindo-butao:hover, form input[type=submit]:hover{
+    transform: scale(1.1);
+}
+footer{
+    color: coral;
+    font-weight: bold;
+    margin: 30px;
+}
+footer p{
+    text-align: center;
+}
